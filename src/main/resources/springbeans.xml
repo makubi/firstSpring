@@ -5,5 +5,7 @@
            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 	<bean id="helloBean" class="at.makubi.first.beans.HelloBean">
 		<property name="name" value="Unnamed" />
+		<property name="greeting" ref="greetingBean" />
 	</bean>
+	<bean id="greetingBean" class="at.makubi.first.beans.GreetingBean" />
 </beans>
