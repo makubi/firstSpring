@@ -1,18 +1,14 @@
 package at.makubi.first.beans;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class HelloBean {
 	
-	private GreetingBean greeting;
+	@Autowired private GreetingBean greeting;
 	
-	private String name;
-
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	public void setGreeting(GreetingBean greetingBean) {
-		this.greeting = greetingBean;
-	}
+	private String name = "Unnamed";
 	
 	public void greetMe() {
 		int greetingNum = name.charAt(0) % 4;
