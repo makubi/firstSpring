@@ -11,9 +11,6 @@ public class Main {
 		ApplicationContext context = new ClassPathXmlApplicationContext("springbeans.xml");
 		HelloBean bean = (HelloBean) context.getBean("helloBean");
 		bean.greetMe();
-		
-		bean.setName("First User");
-		bean.greetMe();
 	}
 
 }
